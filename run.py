@@ -10,10 +10,10 @@ import onnxruntime as rt
 CLASSES = open('action_recognition_kinetics_moments.txt').read().strip().split("\n")
 DURATION = 16
 INPUT_SIZE = 112
-stream = '-0HKFF7F_BY_000003_000013.mp4'
+stream = sys.argv[1]
 model = 'resnet-18-kinetcis-moments.onnx'
 frameskip = 2
-save_output = 'filename.mp4'
+save_output =  sys.argv[2]
 
 def onnx_load_model(onnx_model):
     sess = rt.InferenceSession(onnx_model,None)
