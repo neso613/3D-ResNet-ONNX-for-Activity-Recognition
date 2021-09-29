@@ -15,11 +15,10 @@ model = 'kinetics_resnet_18.onnx'
 frameskip = 2
 save_output =  sys.argv[2]
 
-def onnx_load_model(onnx_model):
-    sess = rt.InferenceSession(onnx_model,None)
-    return sess
+#Load onnx model
+sess = rt.InferenceSession(model,None)
 
-def run_inference(host_input,sess):
+def run_inference(host_input):
     input_name = sess.get_inputs()[0].name
     output_name = sess.get_outputs()[0].name
     outputs = ''
@@ -36,8 +35,6 @@ if __name__ == '__main__':
     if model == '':
         print('[Error] Please provide a valid path --model.')
         sys.exit(0)
-
-    sess = onnx_load_model(model)
 
     if not save_output == '':
         writer = cv2.VideoWriter(save_output,cv2.VideoWriter_fourcc(*'MJPG'),60, (1920, 1080))
@@ -61,7 +58,7 @@ if __name__ == '__main__':
                 blob = np.expand_dims(blob, axis=0)
                 blob = np.ascontiguousarray(blob)
                 start = time.time()
-                result = run_inference(blob,sess)
+                result = run_inference(blob)
                 inferencetime = time.time() - start
         overlay = frame.copy()
         display = frame.copy()
