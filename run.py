@@ -11,7 +11,7 @@ CLASSES = open('action_recognition_kinetics_moments.txt').read().strip().split("
 DURATION = 16
 INPUT_SIZE = 112
 stream = sys.argv[1]
-model = 'resnet-18-kinetcis-moments.onnx'
+model = 'kinetics_resnet_18.onnx'
 frameskip = 2
 save_output =  sys.argv[2]
 
