@@ -8,9 +8,8 @@ pip install opencv-python
 ```
 ### Model
 
-[kinetics-resnet-18.onnx]()
-
-
+[kinetics_moment_resnet_18.onnx](https://drive.google.com/file/d/1i3Ghm34H0Tn1Iy9Bapz_uxs8ZNesW2Ny/view?usp=sharing) \
+[kinetics_moment_resnet_34.onnx](https://drive.google.com/file/d/1L1cCq37pfM91gSwetehbfSZPC6ou7MIU/view?usp=sharing)
 
 ### How to run
 Run the script this way:
