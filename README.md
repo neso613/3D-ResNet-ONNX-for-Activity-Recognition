@@ -1,6 +1,18 @@
 # 3D-ResNet-ONNX-for-Activity-Recognition
 
-### Hoew to run
+### Installation
+```sh
+pip install onnxruntime ,if have CPU \
+pip install onnxruntime-gpu ,if have GPU \
+pip install opencv-python
+```
+### Model
+
+[kinetics-resnet-18.onnx]()
+
+
+
+### How to run
 Run the script this way:
 
 ```sh
