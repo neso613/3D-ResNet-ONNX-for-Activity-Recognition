@@ -2,10 +2,10 @@
 
 ### Installation
 ```sh
-pip install onnxruntime ,if have CPU 
-pip install onnxruntime-gpu ,if have GPU 
-pip install opencv-python
-pip install numpy
+pip3 install onnxruntime ,if have CPU 
+pip3 install onnxruntime-gpu ,if have GPU 
+pip3 install opencv-python
+pip3 install numpy
 ```
 ### Model
 
